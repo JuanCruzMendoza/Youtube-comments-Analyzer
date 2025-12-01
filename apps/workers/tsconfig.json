@@ -1,0 +1,16 @@
+{
+    "extends": "@repo/config/tsconfig.json",
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "target": "esnext",
+        "noEmit": true
+    },
+    "include": [
+        "**/*.ts"
+    ],
+    "exclude": [
+        "sst.config.ts",
+        "node_modules"
+    ]
+}
