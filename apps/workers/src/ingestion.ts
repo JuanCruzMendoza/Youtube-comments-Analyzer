@@ -125,7 +125,7 @@ export async function processIngestion(runId: string, videoId: string) {
         // Update status
         const { error: updateError } = await supabase
             .from("video_analysis_runs")
-            .update({ status: "analyzing", comment_count: commentRecords.length })
+            .update({ status: "processing", comment_count: commentRecords.length })
             .eq("id", runId);
 
         if (updateError) {
